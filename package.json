@@ -1,27 +1,43 @@
 {
   "name": "styled-jsx-css-loader",
-  "version": "0.3.0",
   "description": "styled-jsx/css loader for webpack",
+  "version": "0.3.0",
   "author": "Eric Redon <eric.redon@coox.org>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coox/styled-jsx-css-loader.git"
-  },
-  "peerDependencies": {
-    "styled-jsx": "^2.0.1"
+  "ava": {
+    "verbose": true
   },
   "bugs": {
     "url": "https://github.com/coox/styled-jsx-css-loader/issues"
   },
-  "homepage": "https://github.com/coox/styled-jsx-css-loader#readme",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "loader-utils": "^1.1.0"
   },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "ava": "^0.25.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "shortid": "^2.2.13",
+    "styled-jsx": "^3.1.0",
+    "webpack": "^4.23.1"
+  },
+  "homepage": "https://github.com/coox/styled-jsx-css-loader#readme",
   "keywords": [
+    "loader",
     "styled-jsx",
-    "webpack",
-    "loader"
-  ]
+    "webpack"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "browser": "index.js",
+  "peerDependencies": {
+    "styled-jsx": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coox/styled-jsx-css-loader.git"
+  },
+  "scripts": {
+    "test": "ava"
+  }
 }

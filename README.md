@@ -142,6 +142,36 @@ With this setup, your project must depend on:
 - [next](https://github.com/zeit/next.js)
 - [styled-jsx-css-loader](https://github.com/coox/styled-jsx-css-loader)
 
+## Using Global CSS
+
+By default, this loader will load your css as scoped. If you want it to load css as global, you can pass `{ global: true }` as an option. For example:
+
+```js
+module: {
+  rules: [
+    {
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            plugins: [
+              require.resolve('babel-plugin-transform-es2015-modules-commonjs'),
+              require.resolve('styled-jsx/babel'),
+            ]
+          }
+        },
+        {
+          loader: 'styled-jsx-css-loader',
+          options: { global: true }
+        }
+      ]
+    }
+  ]
+}
+```
+
 ## Credits and acknowledgements
 
 This loader was inspired by [raw-loader](https://github.com/webpack-contrib/raw-loader), and Next.js’ [with-global-stylesheet example](https://github.com/zeit/next.js/tree/master/examples/with-global-stylesheet).
